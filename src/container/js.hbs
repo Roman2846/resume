@@ -1,0 +1,105 @@
+<div>
+  <ul>
+    <li>
+      <p><b>Name:</b> {{name}}</p>
+      <p><b>Description:</b> {{description}}</p>
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-danger">{{>title data="History:"}}</span>
+    <ul>
+        {{#with history}}
+            <li>
+                <p><b>Year:</b> {{year}}</p>
+                <p><b>Founder:</b> {{founder}}</p>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-danger">{{>title data="Type:"}}</span>
+    <ul>
+        {{#each types}}
+            <li>
+                <span class="badge text-bg-success">{{this}}</span>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-danger">{{>title data="Syntax:"}}</span>
+    <ul>
+        {{#with syntax}}
+            <li>
+                <span class="badge text-bg-warning"><p><b>Variables:</b> {{variables}}</p></span>
+                <span class="badge text-bg-warning"><p><b>Functions:</b> {{functions}}</p></span>
+                <span class="badge text-bg-warning"><p><b>Conditionals:</b> {{conditionals}}</p></span>
+                <span class="badge text-bg-warning"><p><b>Loops:</b> {{loops}}</p></span>
+                <span class="badge text-bg-warning"><p><b>Classes:</b> {{classes}}</p></span>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-danger">{{>title data="Feature:"}}</span>
+    <ul>
+        {{#each features}}
+            <li>
+               <span class="badge text-bg-success">{{this}}</span>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-primary">{{>title data="Librarie:"}}</span>
+    <ul>
+        {{#each libraries}}
+            <li>
+               <span class="badge text-bg-warning">{{this}}</span>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-primary">{{>title data="Tool:"}}</span>
+    <ul>
+        {{#each tools}}
+            <li>
+               <span class="badge text-bg-warning">{{this}}</span>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <span class="badge text-bg-danger">{{>title data="Community:"}}</span>
+    <ul>
+        {{#each community}}
+            <li>
+                <span class="badge text-bg-success"><p><b>Name:</b> {{name}}</p></span>
+                <p><b>Type:</b> {{type}}</p>
+            </li>
+        {{/each}}
+    </ul>
+</div>
