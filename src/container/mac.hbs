@@ -1,0 +1,204 @@
+<div>
+  <ul>
+    <li>
+      <p><b>Name:</b> {{name}}</p>
+      <p><b>Description:</b> {{description}}</p>
+      <p><b>Price:</b> {{price}}</p>
+      <p><b>Category:</b> {{category}}</p>
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<div>
+    {{#with features}}
+    {{>title data="Feature:"}}
+
+    <br>
+
+     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Processor:"}}</a>
+    <ul>
+        {{#with processor}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>brand:</b> {{brand}}</p>
+                    <p><b>model:</b> {{model}}</p>
+                    <p><b>speed:</b> {{speed}}</p>
+                    <p><b>cores:</b> {{cores}}</p>
+                    <p><b>cache:</b> {{cache}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Memory:"}}</a>
+    <ul>
+        {{#with memory}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Type:</b> {{type}}</p>
+                    <p><b>Size:</b> {{size}}</p>
+                    <p><b>Speed:</b> {{speed}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Storage:"}}</a>
+    <ul>
+        {{#with storage}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Type:</b> {{type}}</p>
+                    <p><b>Size:</b> {{size}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Display:"}}</a>
+    <ul>
+        {{#with display}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Size:</b> {{size}}</p>
+                    <p><b>Resolution:</b> {{resolution}}</p>
+                    <p><b>Technology:</b> {{technology}}</p>
+                    <p><b>Color_space:</b> {{color_space}}</p>
+                    <p><b>Brightness:</b> {{brightness}}</p>
+                    <p><b>Refresh_rate:</b> {{refresh_rate}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Graphic:"}}</a>
+    <ul>
+        {{#with graphics}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>brand:</b> {{brand}}</p>
+                    <p><b>model:</b> {{model}}</p>
+                    <p><b>memory:</b> {{memory}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Port:"}}</a>
+    <ul>
+        {{#each ports}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>type:</b> {{type}}</p>
+                    <p><b>count:</b> {{count}}</p>
+                    <p><b>features:</b> {{features}}</p>
+                </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Battery:"}}</a>
+    <ul>
+        {{#with battery}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Type:</b> {{type}}</p>
+                    <p><b>Capacity:</b> {{capacity}}</p>
+                    <p><b>Life:</b> {{life}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Weight:</b> {{weight}}</p>
+                </div>
+                </div>
+            </li>
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Dimension:"}}</a>
+    <ul>
+        {{#with dimensions}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Height:</b> {{height}}</p>
+                    <p><b>Width:</b> {{width}}</p>
+                    <p><b>Depth:</b> {{depth}}</p>
+                </div>
+                </div>
+            </li>
+        {{/with}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Operating_system:</b> {{operating_system}}</p>
+                </div>
+                </div>
+            </li>
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Accessorie:"}}</a>
+    <ul>
+        {{#each accessories}}
+            <li>
+                <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p><b>Name:</b> {{name}}</p>
+                    <p><b>Price:</b> {{price}}</p>
+                </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    {{/with}}
+</div>
