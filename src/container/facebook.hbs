@@ -1,7 +1,7 @@
 <div>
     <ul>
         <li>
-            <p><b>Name:</b> {{name}}</p>
+            <span class="badge text-bg-success"><p><b>Name:</b> {{name}}</p></span>
         </li>
     </ul>
 </div>
@@ -9,14 +9,16 @@
 <br>
 
 <div>
-    {{>title data="User:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="User:"}}</a>
     <ul>
         {{#each users}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
     </ul>
 </div>
@@ -24,14 +26,16 @@
 <br>
 
 <div>
-    {{>title data="Friend:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Friend:"}}</a>
     <ul>
         {{#each friends}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
     </ul>
 </div>
@@ -39,14 +43,16 @@
 <br>
 
 <div>
-    {{>title data="Mutual_friend:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Mutual_friend:"}}</a>
     <ul>
         {{#each mutual_friends}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
     </ul>
 </div>
@@ -54,28 +60,35 @@
 <br>
 
 <div>
-    {{>title data="Mutual_friend:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Mutual_friend:"}}</a>
     <ul>
         {{#each mutual_friends}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
+        {{/each}}
+        {{/each}}
+        {{/each}}
     </ul>
 </div>
 
 <br>
 
 <div>
-    {{>title data="Group:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Group:"}}</a>
     <ul>
         {{#each groups}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Description:</b> {{description}}</p>
+                </div>
             </li>
     </ul>
 </div>
@@ -83,15 +96,35 @@
 <br>
 
 <div>
-    {{>title data="Member:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Member:"}}</a>
     <ul>
         {{#each members}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Member:"}}</a>
+    <ul>
+        {{#each members}}
+            <li>
+                <div class="card card-body">
+                <p><b>Id:</b> {{id}}</p>
+                <p><b>Name:</b> {{name}}</p>
+                <p><b>Gender:</b> {{gender}}</p>
+                <p><b>Age:</b> {{age}}</p>
+                </div>
+            </li>
+        {{/each}}
         {{/each}}
         {{/each}}
     </ul>
@@ -100,15 +133,52 @@
 <br>
 
 <div>
-    {{>title data="Mutual_friend:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Friend:"}}</a>
+    <ul>
+        {{#each friends}}
+            <li>
+                <div class="card card-body">
+                <p><b>Id:</b> {{id}}</p>
+                <p><b>Name:</b> {{name}}</p>
+                <p><b>Gender:</b> {{gender}}</p>
+                <p><b>Age:</b> {{age}}</p>
+                </div>
+            </li>
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Mutual_friend:"}}</a>
     <ul>
         {{#each mutual_friends}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Mutual_friend:"}}</a>
+    <ul>
+        {{#each mutual_friends}}
+            <li>
+                <div class="card card-body">
+                <p><b>Id:</b> {{id}}</p>
+                <p><b>Name:</b> {{name}}</p>
+                <p><b>Gender:</b> {{gender}}</p>
+                <p><b>Age:</b> {{age}}</p>
+                </div>
+            </li>
+        {{/each}}
         {{/each}}
     </ul>
 </div>
@@ -116,13 +186,15 @@
 <br>
 
 <div>
-    {{>title data="Group:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Group:"}}</a>
     <ul>
         {{#each groups}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>description:</b> {{description}}</p>
+                </div>
             </li>
     </ul>
 </div>
@@ -130,14 +202,16 @@
 <br>
 
 <div>
-    {{>title data="Member:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Member:"}}</a>
     <ul>
         {{#each members}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
         {{/each}}
     </ul>
@@ -146,29 +220,17 @@
 <br>
 
 <div>
-    <ul>
-            <li>
-                <p><b>Id:</b> {{id}}</p>
-                <p><b>Name:</b> {{name}}</p>
-                <p><b>description:</b> {{description}}</p>
-            </li>
-    </ul>
-</div>
-
-<br>
-
-<div>
-    {{>title data="Member:"}}
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">{{>title data="Member:"}}</a>
     <ul>
         {{#each members}}
             <li>
+                <div class="card card-body">
                 <p><b>Id:</b> {{id}}</p>
                 <p><b>Name:</b> {{name}}</p>
                 <p><b>Gender:</b> {{gender}}</p>
                 <p><b>Age:</b> {{age}}</p>
+                </div>
             </li>
-        {{/each}}
-        {{/each}}
         {{/each}}
         {{/each}}
         {{/each}}
