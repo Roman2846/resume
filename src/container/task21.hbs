@@ -1,116 +1,101 @@
-<hr />
 <main>
   <div class='card'>
     <div class='card-body'>
       <div class='card'>
         <div class='card-body'>
-          <h1>H1 Heading</h1>
-          <a>Main</a>
-          <br />
-          <br />
-          <a href='#' class='btn btn-primary'>JavaScript</a>
-          <br />
-          <br />
-          <a class='btn btn-outline-primary'>JavaScript is a
-            popular high-level, dynamic, and interpreted
-            programming language.</a>
-          <div class='text-info'>Open page</div>
-          <div class='text-warning'>Add to cart</div>
+          {{#with heading}}
+            <div>
+              <h1>{{main.title}}</h1>
+              <p>{{main.text}}</p>
+              <div
+                href='#'
+                class='btn btn-primary'
+              >{{main.button_text.solid}}</div>
+              <br />
+              <br />
+              <div
+                class='btn btn-outline-primary'
+              >{{main.button_text.outline}}</div>
+            </div>
         </div>
-      </div>
-
-      <br />
-
-      <div class='card'>
-        <div class='card-body'>
-          <h2>H2 Heading Second</h2>
-          <a>Main</a>
-          <br />
-          <br />
-          <a class='btn btn-secondary'>Stack Overflow</a>
-          <br />
-          <br />
-          <a class='btn btn-outline-secondary'>First-class
-            functions</a>
-          <div class='text-primary'>Open page</div>
-          <div class='text-success'>Add to cart</div>
         </div>
-      </div>
 
-      <br />
+        <br />
 
-      <div class='card'>
-        <div class='card-body'>
-          <h3>H3 Heading Subblock</h3>
-          <a>Main</a>
-          <br />
-          <br />
-          <a class='btn btn-dark'>JavaScript Weekly</a>
-          <br />
-          <br />
-          <a
-            class='btn btn-outline-secondary text-dark'
-          >Prototype-based inheritance newsletter</a>
-          <div class='text-success'>Open page</div>
-          <div class='text-danger'>Add to cart</div>
+        <div class='card'>
+          <div class='card-body'>
+            <h2>{{second.title}}</h2>
+            <p>{{second.text}}</p>
+            <div class='btn btn-secondary'>{{second.button_text.solid}}</div>
+            <br>
+            <br>
+            <div class="btn btn-outline-secondary">{{second.button_text.outline}}</div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class='card'>
+          <div class='card-body'>
+            <h3>{{subblock.title}}</h3>
+            <p>{{subblock.text}}</p>
+            <div class="btn btn-dark">{{subblock.button_text.solid}}</div>
+            <br>
+            <br>
+            <div class="btn btn-outline-secondary text-dark">{{subblock.button_text.outline}}</div>
+          </div>
+          {{/with}}
         </div>
       </div>
     </div>
   </div>
 
-  <br />
+  <br>
 
   <div class='card'>
     <div class='card-body'>
-      <div class='display-1'>Nested_display</div>
-      <a class='btn btn-outline-success'>HTML</a>
-      <br />
-      <br />
-      <div class='card'>
-        <div class='card-body'>
-          <h1>Display 4 children</h1>
-          <a>Main</a>
-          <br />
-          <br />
-          <a class='btn btn-outline-warning'>Outdated HTML
-            tags</a>
-          <br />
-          <br />
-          <a class='btn btn-outline-warning'>tags that have
-            been identified as deprecated and not
-            recommended for use in HTML version 5</a>
+        <div class="display-1">{{nested_display.title}}</div>
+        <br>
+        <div class='card'>
+            <div class='card-body'>
+                <h2>{{nested_display.children_display.title}}</h2>
+                <p>{{nested_display.children_display.text}}</p>
+                <div class="btn btn-outline-warning">{{nested_display.children_display.button.text}}</div>
+            </div>
         </div>
-      </div>
-      <br />
-      <a class='btn btn-info'>Learn more</a>
+        <br>
+        <div class="btn btn-info">{{nested_display.button.text}}</div>
     </div>
   </div>
 
-  <br />
+  <br>
 
   <div class='card'>
     <div class='card-body'>
-      <h4>Paragraph</h4>
-      <div class='text-primary'>About modules</div>
-      <div class='text-primary'>Modules with import/export
-        statements</div>
-      <br />
-      <div class='text-primary'>Open link page</div>
-      <div class='text-primary'>https://google.com</div>
-      <br />
-      <div class='card'>
+            {{#with paragraph}}
+            <h4>Paragraph</h4>
+            <div class="btn text-primary">{{title}}</div>
+            <br>
+            <div class="btn text-primary">{{text}}</div>
+            <br>
+            <div class="btn text-primary">{{button.text}}</div>
+            <br>
+             <a href="url">https://github.com/</a>
+             <br>
+             <br>
+        <div class='card'>
         <div class='card-body'>
-          <div class='text-primary'>Github</div>
-          <div
-            class='text-primary'
-          >https://github.com/</div>
-          <br />
-          <div class='text-primary'>Bootstrap</div>
-          <div
-            class='text-primary'
-          >https://getbootstrap.com/</div>
+            <ul>
+                {{#each list_name}}
+                <li>
+                    <div class="btn text-primary">{{text}}</div>
+                    <a href="url" class="btn text-primary">{{url}}</a>
+                </li>
+                {{/each}}
+            </ul>
         </div>
-      </div>
+        </div>
+            {{/with}}
     </div>
   </div>
 </main>
