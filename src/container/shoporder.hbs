@@ -1,0 +1,42 @@
+<main class='p-5'>
+  {{#with navigation}}
+    <section>
+      <div class='row mb-4'>
+        {{#each links}}
+          <div class='col-3'>
+            <div class='nav'>
+              <div class='nav-item'>
+                <a
+                  href='{{href}}'
+                  class='nav-link {{#if @last}} disabled {{/if}}'
+                >{{text}}</a>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/with}}
+
+  <div class="mb-4">
+    <h2>{{header}}</h2>
+    <br>
+    {{#with contacts_data}}
+    <h3>{{title}}</h3>
+    {{#each buttons}}
+        {{#if isPrimary}}<button class="btn btn-warning text-light ">{{text}}</button> {{/if}}
+        {{#if isOutline}}<button class="btn btn-outline-warning">{{text}}</button> {{/if}}
+    {{/each}}
+
+    {{#with form}}
+    <div class="row g-5">
+        {{#each surname}}
+        <div class="col-12">
+            <label class="form-label">{{label}}</label>
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+    {{/with}}
+  </div>
+</main>
