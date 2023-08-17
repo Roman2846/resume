@@ -16,6 +16,9 @@ nav {
 
 section {
   padding: 16px;
+
+  max-width: 800px;
+
 }
 h1 {
   background: red;
