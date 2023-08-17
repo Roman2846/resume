@@ -17,3 +17,7 @@ nav {
 section {
   padding: 16px;
 }
+h1 {
+  background: red;
+  color: yellow;
+}
