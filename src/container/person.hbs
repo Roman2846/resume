@@ -1,7 +1,7 @@
-<div>
-  {{#with person}}
-            <div>
-            {{> title data="Persons:" big=true}}
+<main>
+    {{#with person}}
+        <div>
+        {{> title data="Persons:" big=true}}
             <ul>
                 <li>
                     <p><b>Name:</b> {{name}}</p>
@@ -11,7 +11,7 @@
             </ul>
         </div>
 
-        <hr>
+        <br>
         
         <div>
             {{> title data="Address:" big=true}}
@@ -28,7 +28,7 @@
             </ul>
         </div>
 
-        <hr>
+        <br>  
 
         <div>
             {{> title data="Educations:" big=true}}
@@ -44,7 +44,7 @@
             </ul>
         </div>
 
-        <hr>
+        <br>
 
         <div>
             {{> title data="WorkExperiences:" big=true}}
@@ -65,8 +65,6 @@
                         <p><b>Year_founded:</b> {{year_founded}}</p>
                         <p><b>Industry:</b> {{industry}}</p>
                     </li>
-                
-                     <hr>
 
                     <div>
                         {{> title data="Employees:" big=true}}
@@ -153,10 +151,10 @@
                                     </ul>
                                 </div>
                             {{/each}}
-                         </ul>
-                     </div>
+                        </ul>
+                    </div>
                 {{/each}}
             </ul>
         </div>
     {{/with}}
-</div>
+</main>
