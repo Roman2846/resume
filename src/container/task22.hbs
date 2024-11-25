@@ -1,90 +1,94 @@
-<main>
+<main class='p-5'>
   <div class='text-center'>
-    <h1>InnovaMind</h1>
-    <div class='text-uppercase'><p>Welcome to our wonderful
-        community</p></div>
-  </div>
-  <div class='card'>
-    <div class='card-body'>
-      <div class='text-end'>
-        <div class='display-6'>InnovaMind</div>
-        <h2>Welcome to our wonderful community</h2>
-      </div>
-      <div class='btn btn-outline-info'>Show more</div>
-    </div>
+    {{#with page_header}}
+      <h1>{{title}}</h1>
+      <div class='text-uppercase'><p
+        >{{description}}</p></div>
+    {{/with}}
   </div>
 
-  <br />
-
-  <div class='card'>
-    <div class='card-body'>
-      <div class='display-5'>Advantage</div>
-      <br />
-      <div class='card'>
-        <div class='card-body'>
-          <div class='display-4'>Efficiency</div>
-          <br />
-          <h6>Streamline your software development</h6>
-          <p>Streamline your software development with our
-            innovative platform...</p>
-          <div class='btn btn-outline-warning'>Show more</div>
-        </div>
-      </div>
-
-      <br />
-
-      <div class='card'>
-        <div class='card-body'>
-          <div
-            class='text-center display-4'
-          >Innovation</div>
-          <br />
-          <h6 class='text-center'>Forward-thinking approach
-            to programming</h6>
-          <p class='text-center'>Stay ahead of the curve
-            with our forward-thinking approach to
-            programming...</p>
-          <div class='btn btn-outline-warning'>Show more</div>
-        </div>
-      </div>
-
-      <br />
-
-      <div class='card'>
-        <div class='card-body'>
-          <div
-            class='text-end display-4'
-          >Collaboration</div>
-          <br />
-          <h6 class='text-end'>Connect with like-minded
-            developers</h6>
-          <p class='text-end'>Connect with a community of
-            like-minded developers to share knowledge and
-            insights...</p>
-          <div class='btn btn-outline-warning'>Show more</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br />
-
-  <div class='card'>
-    <div class='card-body'>
-      <div class='display-5'>Terms of use</div>
-      <div class='card'>
-        <div class='card-body'>
-          <h5>Check out our requirements</h5>
-          <div class='card'>
-            <div class='card-body'>
-              <p>By using or accessing the service, you
-                agree to be bound by the terms and
-                conditions outlined in the agreement.</p>
-              <div class='btn btn-success'>Аccept</div>
+{{#with section}}
+    {{#with about_us}}
+        {{#with title_list}}
+            <div class='card mb-4'>
+                <div class='card-body'>
+                <div class='text-end'>
+                    <div class='display-6'>{{main}}</div>
+                    <h2>{{sub}}</h2>
+                </div>
+        {{/with}}
+            {{#with button}}
+                <div class='btn btn-outline-info'>{{text}}</div>
+            {{/with}}
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    {{/with}}
+
+        {{#with advantage}}
+            <div class='card mb-4'>
+                <div class='card-body'>
+                <div class='display-5'>{{title}}</div>
+                <br />
+                {{#with efficiency}}
+                    <div class='card mb-4'>
+                        <div class='card-body'>
+                        <div class='display-4'>{{title}}</div>
+                        <br />
+                        <h6>{{sub_title}}</h6>
+                        <p>{{description}}</p>
+                        <div class='btn btn-outline-warning'>{{button}}</div>
+                        </div>
+                    </div>
+                {{/with}}
+
+                {{#with innovation}}
+                    <div class='card mb-4'>
+                        <div class='card-body'>
+                        <div class='text-center display-4'>{{title}}</div>
+                        <br />
+                        <h6 class='text-center'>{{sub_title}}</h6>
+                        <p class='text-center'>{{description}}</p>
+                        <div class='btn btn-outline-warning'>{{button}}</div>
+                        </div>
+                    </div>
+                {{/with}}
+
+                {{#with collaboration}}
+                    <div class='card'>
+                        <div class='card-body'>
+                        <div class='text-end display-4'>{{title}}</div>
+                        <br />
+                        <h6 class='text-end'>{{sub_title}}</h6>
+                        <p class='text-end'>{{description}}</p>
+                        <div class='btn btn-outline-warning'>{{button}}</div>
+                        </div>
+                    </div>
+                {{/with}}
+                </div>
+            </div>
+        {{/with}}
+
+        {{#with agreement}}
+            <div class='card'>
+                <div class='card-body'>
+                <div class='display-5'>{{title}}</div>
+                {{#with info}}
+                    <div class='card'>
+                        <div class='card-body'>
+                        <h5>{{sub_title}}</h5>
+                        {{#with detail}}
+                        <div class='card'>
+                            <div class='card-body'>
+                            <p>{{text}}</p>
+                            <div class='btn btn-success'>{{button}}</div>
+                            </div>
+                        </div>
+                        {{/with}}
+                        </div>
+                    </div>
+                {{/with}}
+                </div>
+            </div>
+        {{/with}}
+{{/with}}
 </main>

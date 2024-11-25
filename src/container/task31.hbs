@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <main>
 	<div class='row'>
 		{{#with navigation}}
@@ -10,6 +11,26 @@
 		{{/with}}
 
 		<hr />
+=======
+<main class='p-5'>
+  <div class='row'>
+    {{#with navigation}}
+      <nav>
+        {{#each links}}
+          <a
+            class='btn btn-link'
+            href='{{href}}'
+          >{{text}}</a>
+        {{/each}}
+        <a
+          class='btn btn-primary'
+          href='{{button.href}}'
+        >{{button.text}}</a>
+      </nav>
+    {{/with}}
+
+  <hr>
+>>>>>>> 92342241c595dda7e9e1d032fa668f53ca72991f
 
 		<div class='card-header'>
 			<nav>
@@ -45,7 +66,11 @@
 			{{/with}}
 		</div>
 
+<<<<<<< HEAD
 		<hr>
+=======
+  <hr class="mt-3">
+>>>>>>> 92342241c595dda7e9e1d032fa668f53ca72991f
 
 		<div>
 			{{#with winner}}
@@ -101,6 +126,7 @@
 			{{/with}}
 		</div>
 
+<<<<<<< HEAD
 		<hr>
 
 		<div>
@@ -123,9 +149,36 @@
 			</section>
 			{{/with}}
 		</div>
+=======
+  <hr class="mt-3">
+ 
+  <div>
+    {{#with relaxion}}
+    <section>
+        <div class="display-3">{{title}}</div>
+        <div class="row">
+        {{#each cards}}
+        <div class="col-5 gy-4 gx-2">
+            <div class="card">
+                <div class="card-header">{{header}}</div>
+                <div class="card-body">
+                    <h6 class="card-title">{{title}}</h6>
+                    <div>{{description}}</div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    </section>
+    {{/with}}
+  </div>
+
+  <hr class="mt-3">
+>>>>>>> 92342241c595dda7e9e1d032fa668f53ca72991f
 
 		<hr>
 
+<<<<<<< HEAD
 		<div>
 			{{#with rest}}
 			<section>
@@ -147,9 +200,13 @@
 			</section>
 			{{/with}}
 		</div>
+=======
+  <hr class="mt-3">
+>>>>>>> 92342241c595dda7e9e1d032fa668f53ca72991f
 
 		<hr>
 
+<<<<<<< HEAD
 		<div>
 			{{#with proposition}}
 			<section>
@@ -170,6 +227,9 @@
 			</section>
 			{{/with}}
 		</div>
+=======
+  <hr class="mt-3">
+>>>>>>> 92342241c595dda7e9e1d032fa668f53ca72991f
 
 		<hr>
 
