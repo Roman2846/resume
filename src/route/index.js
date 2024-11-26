@@ -200,9 +200,7 @@ router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
     // ↙ сюди вводимо JSON дані
-
     layout: 'big',
-
     page: {
       title: 'Resume | Work',
     },
